@@ -1,0 +1,185 @@
+    /* General styles for accessibility and readability */ 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+        background-color: #004080;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Container for form and table */
+    .container, .container_2 {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .container h1, .container_2 h1 {
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #004080;
+    }
+    /* Centering h2 elements */
+h2 {
+    text-align: center; 
+    color: #004080;
+    margin: 20px; 
+}
+
+    /* Form styling */
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    form label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    form input, form select, form textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    form textarea {
+        resize: vertical;
+    }
+
+    /* Button styling */
+    button[type="submit"] {
+        padding: 12px;
+        background-color: #004080;
+        color: white;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #003060;
+    }
+
+    a {
+        display: inline-block; /* Make the link behave like a button */
+        padding: 5px 5px; /* Add padding */
+        background-color:#004080; /* Red color for delete link */
+        color: white; /* White text color */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 1.1em; /* Font size */
+        transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    }
+    
+    /* Link hover effect */
+    a:hover {
+        background-color: red; /* Darker red on hover */
+        transform: scale(1); /* Slightly scale up on hover */
+    }
+    
+    /* Table styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table th, table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+        background-color: #004080;
+        color: white;
+    }
+
+    table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container, .container_2 {
+            padding: 10px;
+        }
+
+        form {
+            grid-template-columns: 1fr;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+        }
+
+        table, thead, tbody, th, td, tr {
+            display: block;
+            width: 100%;
+        }
+
+        table tr {
+            margin-bottom: 15px;
+        }
+
+        table th {
+            display: none;
+        }
+
+        table td {
+            display: block;
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+
+        table td:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    /* Accessibility Features */
+    input:focus, select:focus, textarea:focus {
+        outline: 3px solid #0066cc;
+        border-color: #0066cc;
+    }
+
+    button:focus {
+        outline: 3px solid #003060;
+    }
+
+    
